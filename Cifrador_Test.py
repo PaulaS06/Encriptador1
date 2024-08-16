@@ -52,8 +52,6 @@ class CifradoTest(unittest.TestCase):
     def test_cifrar_sin_clave(self):
         mensaje = "Hola Como Estas"
         clave = ""
-        #with self.assertRaises(ValueError):
-            #Cifrador.cifrar(mensaje, clave)
 
         try:
             if not clave:
