@@ -4,7 +4,7 @@ from Crypto.Util.Padding import pad, unpad
 import base64
 
 
-class SimpleEncryption:
+class SystemEncryption:
     def __init__(self, key):
         self.key = MD5.new(key.encode()).digest()
         self.cipher = AES.new(self.key, AES.MODE_ECB)
