@@ -1,5 +1,5 @@
 import unittest
-from src.Logic import Cifrador as Cifrador
+from src.Logic import EncryptionSistem as Cifrador
 
 
 class CifradoTest(unittest.TestCase):
