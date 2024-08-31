@@ -1,23 +1,28 @@
 import unittest
-from src.Logic import EncryptionSistem as Cifrador
+
+import sys
+sys.path.append("src")
+
+from Logic.EncryptionSystem import SimpleEncryption
 
 
-class CifradoTest(unittest.TestCase):
+class EncryptionTest(unittest.TestCase):
 
     # Pruebas normales de cifrado
-    def test_cifrado_correctamente(self):
-        mensaje = "Hola Mundo"
-        clave = 5678
-        mensaje_cifrado = "iOe3AaKoBBBmHWX+JGbsTw=="
-        resultado = Cifrador.cifrar(mensaje, clave)
-        self.assertEqual(mensaje_cifrado, resultado)
+    def test_encrypt_correctly(self):
+        message = "Hola Mundo"
+        key = 5678
+        encrypted_message = "iOe3AaKoBBBmHWX+JGbsTw=="
+        result = SimpleEncryption.encrypt(message, key)
+        self.assertEqual(encrypted_message, result)
 
     def test_cifrar_mensaje_corto(self):
-        mensaje = "HolaMundo"
-        clave = 2343
-        mensaje_cifrado = "1zE+Mx7Oi7OSfYrknIZnkg=="
-        resultado = Cifrador.cifrar(mensaje, clave)
-        self.assertEqual(mensaje_cifrado, resultado)
+        message = "HolaMundo"
+        key = 2343
+        encrypted_message= "1zE+Mx7Oi7OSfYrknIZnkg=="
+        simple_encryption = SimpleEncryption(str(key))
+        result = simple_encryption.encrypt(message, key)
+        self.assertEqual(encrypted_message, result)
 
     def test_cifrar_mensaje_512_bits(self):
         mensaje = "b" * 512

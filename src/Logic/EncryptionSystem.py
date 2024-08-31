@@ -3,6 +3,7 @@ from Crypto.Hash import MD5
 from Crypto.Util.Padding import pad, unpad
 import base64
 
+
 class SimpleEncryption:
     def __init__(self, key):
         self.key = MD5.new(key.encode()).digest()
@@ -21,5 +22,5 @@ class SimpleEncryption:
         return message
 
 
-    def esta_cifrado(self, mensaje_cifrado):
+def esta_cifrado(mensaje_cifrado):
     pass
