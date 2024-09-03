@@ -24,3 +24,4 @@ class SystemEncryption:
 
 def esta_cifrado(mensaje_cifrado):
     pass
+
