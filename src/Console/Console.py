@@ -1,3 +1,5 @@
+import sys
+sys.path.append("src")
 from AesEncryption import AesEncryption
 from EncryptionContext import EncryptionContext
 
