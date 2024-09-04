@@ -1,7 +1,7 @@
 import unittest
-from AesEncryption import AesEncryption
-from EncryptionContext import EncryptionContext
-from ErrorsAndExceptions import ErrorsAndExceptions
+from src.Logic.AesEncryption import AesEncryption
+from src.Logic.EncryptionContext import EncryptionContext
+from src.Logic.ErrorsAndExceptions import ErrorsAndExceptions
 
 class EncryptionTest(unittest.TestCase):
 
