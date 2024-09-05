@@ -9,7 +9,7 @@ This program is a text encryption and decryption system, which uses the AES algo
 
 ```pip install pycryptodome```
 
-3. Make sure ypu have Crypto installed. If you don't have it, you can install it by running the following command in the terminal:
+3. Make sure you have Crypto installed. If you don't have it, you can install it by running the following command in the terminal:
 
 ```pip install Crypto```
 
