@@ -39,7 +39,9 @@ When you run the program, you will see a menu with the following options:
 3. Exit
 ```
 The program will ask you to enter the number of the option you want to select.
+
 4. If you select option 1, the program will ask you to enter the text you want to _encrypt_.
+
 5. If you select option 2, the program will ask you to enter the text you want to _decrypt_.
 
 - If you select option 1 or 2, the program will ask you to enter the key you want to use to encrypt or decrypt the text.
