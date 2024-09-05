@@ -1,9 +1,10 @@
-class ErrorsAndExceptions:
+class ErrorsAndExceptions():
     """Class to simulate encryption and decryption errors."""
-    
+
     def __init__(self, encryption_context):
         self.encryption_context = encryption_context
 
+    # encrypt errors
     def encrypt_without_key(self):
         message = "Hello, how are you?"
         key = ""
@@ -48,6 +49,8 @@ class ErrorsAndExceptions:
         except ValueError as e:
             return f"Error: {e}"
 
+    # decrypt errors
+
     def decrypt_message_not_encrypted(self):
         encrypted_message = "nu80"
         key = "78"
@@ -69,3 +72,34 @@ class ErrorsAndExceptions:
             self.encryption_context.decrypt_message(encrypted_message, key)
         except ValueError as e:
             return f"Error: {e}"
+
+    def decrypt_without_key(self):
+        message = "cYPKAEiAO1kzbWOZDODyv3GDygBIgDtZM21jmQzg8r9xg8oASIA7WTNtY5kM4PK"
+        key = ""
+        encrypted_message = "No se puede descifrar"
+
+        try:
+            if not key:
+                raise KeyError("La clave no puede estar vacía")
+            self.encryption_context.decrypt_message(encrypted_message, key)
+        except KeyError as e:
+            print(f"Error: {e}")
+            encrypted_message = "No se puede descifrar"
+
+            print(f"Mensaje descifrado: {encrypted_message}")
+
+    def decrypt_partially_encrypted_message(self):
+        message = "xWTdQjgVKprNBiw"
+        key = "789"
+        encrypted_message = "No se puede descifrar"
+
+        try:
+            if len(message) < 20:  # Ejemplo de condición para un mensaje parcialmente cifrado
+                raise IndexError("El mensaje está parcialmente cifrado o es demasiado corto")
+            self.encryption_context.decrypt_message(encrypted_message, key)
+        except IndexError as e:
+            print(f"Error: {e}")
+            encrypted_message = "No se puede descifrar"
+
+            print(f"Mensaje descifrado: {encrypted_message}")
+
