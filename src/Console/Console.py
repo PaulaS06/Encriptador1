@@ -1,7 +1,7 @@
 import sys
 sys.path.append("src")
-from src.Logic.AesEncryption import AesEncryption
-from src.Logic.EncryptionContext import EncryptionContext
+from Logic.AesEncryption import AesEncryption
+from Logic.EncryptionContext import EncryptionContext
 
 def display_menu():
     print("Encryption System Menu")
